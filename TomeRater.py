@@ -41,6 +41,7 @@ class Book:
     def __repr__(self):
         return self.title
 
+    # DO NOT MODIFY! Makes instances of the class Hashable.
     def __hash__(self):
         return hash((self.title, self.isbn))
 
@@ -117,9 +118,11 @@ class TomeRater:
 
     def create_book(self, title, isbn):
         return Book(title, isbn)
+
     # Creates fiction object
     def create_novel(self, title, author, isbn):
         return Fiction(title, author, isbn)
+
     # Creates non-fiction object
     def create_non_fiction(self, title, subject, level, isbn):
         return Non_Fiction(title, subject, level, isbn)
